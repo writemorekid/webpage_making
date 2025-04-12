@@ -1,0 +1,308 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: url('background.jpeg') center/cover no-repeat;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.8s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.add-item-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.add-item-form input {
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+.add-item-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #ff4e50;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.add-item-form button:hover {
+    background: #f9d423;
+}
+
+/* Category Styles */
+.category {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.category-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-header:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.category-header h2 {
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.expand-icon {
+    font-size: 1.5em;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.expanded .expand-icon {
+    transform: rotate(90deg);
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.category ul.visible {
+    height: auto;
+    opacity: 1;
+}
+
+.category li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.category li:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Delete Item Button Styles */
+.delete-item-button {
+    margin-left: auto; /* Push the button to the extreme right */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background: #ff4e50;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s;
+    background-image: url('bin.png');
+    background-size: 24px; /* Adjust size of the bin icon */
+    background-position: center; /* Center the icon horizontally */
+    background-repeat: no-repeat; /* Prevent icon from repeating */
+    text-indent: -9999px; /* Hide text */
+}
+
+.delete-item-button:hover {
+    background: #f9d423;
+}
+
+/* Delete Category Button Styles */
+.delete-category-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background: #ff4e50;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s;
+    margin-left: 10px;
+    background-image: url('bin.png');
+    background-size: 24px; /* Adjust size of the bin icon */
+    background-position: center; /* Center the icon horizontally */
+    background-repeat: no-repeat; /* Prevent icon from repeating */
+    text-indent: -9999px; /* Hide text */
+}
+
+.delete-category-button:hover {
+    background: #f9d423;
+}
+
+/* Progress Bar Styles */
+.progress-bar-container {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 25px;
+    width: 0;
+    background: linear-gradient(to right, #ff4e50, #f9d423);
+    transition: width 0.5s;
+    border-radius: 12px;
+    animation: progressBar 1s ease-out;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.footer img:hover {
+    transform: scale(1.1);
+}
+
+/* Social Icons Styles */
+.social-label {
+    font-weight: bold;
+    color: #ccc;
+    margin-right: 10px;
+}
+
+.social-icon {
+    margin: 0 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes lift {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes progressBar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply animations */
+.category li:hover {
+    animation: lift 0.3s ease;
+}
+
+.category ul.visible li {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Hide default checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 24px; /* Size of the checkbox */
+    height: 24px;
+    position: relative;
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+}
+
+/* Checked state */
+input[type="checkbox"]:checked {
+    background-color: #4CAF50; /* Background color when checked */
+    border-color: #4CAF50; /* Border color when checked */
+}
+
+/* Checkbox hover effect */
+input[type="checkbox"]:hover {
+    background-color: #f0f0f0; /* Background color on hover */
+}
+
+/* Custom trophy icon */
+input[type="checkbox"]::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); /* Position and rotate trophy */
+    width: 14px; /* Size of the trophy icon */
+    height: 14px;
+    border-top: 3px solid #fff; /* Trophy color */
+    border-left: 3px solid #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s, transform 0.2s; /* Smooth transitions */
+}
+
+/* Show trophy icon when checkbox is checked */
+input[type="checkbox"]:checked::before {
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotate trophy to show */
+    opacity: 1;
+}
